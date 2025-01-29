@@ -1,0 +1,142 @@
+Identify the figure of speech: "The silence was as deafening as thunder.",Simile,Paradox,Metaphor,Personification,B
+
+Which of the following words is an example of a gerund?,Running,Dance,Sleeping,Barked,A
+
+Who wrote the famous poem "Ozymandias"?,William Blake,John Keats,Percy Bysshe Shelley,Lord Byron,C
+
+What is the meaning of the suffix "-logy" in biology?,Study of,Science of,Theory of,Observation of,A
+
+Solve for x: 2x² - 3x - 5 = 0, 5/2,1,-1,No solution,C
+
+What is the derivative of sin(x)?,cos(x),-cos(x),sin(x),-sin(x),A
+
+A circle has a radius of 7. What is its area?,49π,14π,21π,77π,A
+
+A triangle with sides 5 12 and 13 is:,Equilateral,Right,Isosceles,Scalene,B
+
+What is the molar mass of H2SO4?,96 g/mol,98 g/mol,100 g/mol,102 g/mol,B
+
+Which gas law states that pressure and volume are inversely proportional?,Charles's Law,Boyle's Law,Avogadro's Law,Gay-Lussac's Law,B
+
+What particle is exchanged during nuclear reactions?,Electron,Photon,Neutron,Proton,C
+
+Who was the second president of the Philippines?,Manuel L. Quezon,Sergio Osmeña,Jose Laurel,Ramon Magsaysay,B
+
+The Pact of Biak-na-Bato was signed in which year?,1896,1897,1898,1901,B
+
+Who led the longest revolt in Philippine history?,Diego Silang,Dagohoy,Andres Malong,Francisco Maniago,B
+
+What is the name of the Philippine constitutional convention in 1934?,Tydings-McDuffie Act,1934 Constitutional Assembly,Malolos Congress,Philippine Constitutional Convention,D
+
+Which act established free public primary education in the Philippines?,Education Act of 1901,Education Act of 1982,Education Reform Act,Free Public Act of 1935,A
+
+Which treaty ended World War I?,Treaty of Paris,Treaty of Versailles,Treaty of Brest-Litovsk,Treaty of Ghent,B
+
+What was the name of the German strategy during World War II?,Trench Warfare,Blitzkrieg,Operation Overlord,Manhattan Project,B
+
+The Industrial Revolution began in which country?,France,United States,Germany,Great Britain,D
+
+Who succeeded Queen Elizabeth I of England?,James I,Charles I,Henry VIII,William III,A
+
+Who wrote "The Waste Land"?,A. T.S. Eliot,B. William Wordsworth,C. Ezra Pound,D. W.B. Yeats,A
+What is the term for a word that has the opposite meaning of another word?,A. Synonym,B. Antonym,C. Homonym,D. Acronym,B
+Which of the following is the subjunctive form of "If he was here, he would know"?,A. If he were here, he would know,B. If he is here, he would know,C. If he was here, he will know,D. If he has been here, he would know,A
+Find the roots of the equation x² - 6x + 9 = 0?,A. 3 and -3,B. 3 and 3,C. -3 and -3,D. No real roots,B
+What is the sum of the interior angles of a pentagon?,A. 540°,B. 720°,C. 360°,D. 180°,A
+What is the integral of e^x?,A. e^x + C,B. x^e + C,C. e^(x+1) + C,D. xe^(x),A
+A triangle has sides measuring 13, 14, and 15. What is its area?,A. 84,B. 91,C. 72,D. 105,B
+What is the value of sin(90°)?,A. 0,B. 1,C. -1,D. Undefined,B
+What is the third derivative of x^4?,A. 24x,B. 12x,C. 4x,D. 0,A
+What is the product of (x + 3)(x - 3)?,A. x² - 9,B. x² + 9,C. x² - 6,D. x² + 6,A
+What is the molecular formula of glucose?,A. C6H12O6,B. C12H6O6,C. C6H6O6,D. C12H12O12,A
+Which of the following best describes an ionic bond?,A. Sharing of electrons,B. Transfer of electrons,C. Sharing of protons,D. Transfer of protons,B
+What is the pH of a neutral solution?,A. 0,B. 7,C. 14,D. 10,B
+Which scientist proposed the law of universal gravitation?,A. Galileo Galilei,B. Isaac Newton,C. Albert Einstein,D. Nicolaus Copernicus,B
+What is the charge of an electron?,A. +1,B. -1,C. 0,D. +2,B
+Which layer of Earth's atmosphere contains the ozone layer?,A. Troposphere,B. Stratosphere,C. Mesosphere,D. Thermosphere,B
+What is the half-life of a radioactive isotope?,A. The time it takes for half the atoms in a sample to decay,B. The time it takes for all atoms to decay,C. The time it takes for an atom to lose all protons,D. The time it takes for an atom to lose all electrons,A
+Who was the first female president of the Philippines?,A. Corazon Aquino,B. Gloria Macapagal Arroyo,C. Leni Robredo,D. Miriam Defensor Santiago,A
+What treaty ceded the Philippines from Spain to the United States?,A. Treaty of Paris,B. Treaty of Versailles,C. Treaty of Tordesillas,D. Treaty of Guadalupe Hidalgo,A
+Who wrote "La Liga Filipina"?,A. Jose Rizal,B. Andres Bonifacio,C. Apolinario Mabini,D. Emilio Aguinaldo,A
+What year was the Katipunan founded?,A. 1892,B. 1896,C. 1898,D. 1901,A
+Who led the first successful revolt against the Spaniards in the Philippines?,A. Diego Silang,B. Francisco Dagohoy,C. Andres Bonifacio,D. Apolinario Mabini,B
+What is the capital of the Ilocos Region in the Philippines?,A. Laoag,B. Vigan,C. San Fernando,D. Dagupan,B
+What is the formula of kinetic energy?,A. ½mv²,B. mv,C. mgh,D. Fd,A
+Who was known as the "Brains of the Revolution"?,A. Apolinario Mabini,B. Emilio Jacinto,C. Andres Bonifacio,D. Gregorio del Pilar,A
+What is the acceleration due to gravity on Earth?,A. 9.8 m/s²,B. 10 m/s²,C. 8.9 m/s²,D. 9 m/s²,A
+Which country launched the first artificial satellite, Sputnik?,A. USA,B. USSR,C. Germany,D. China,B
+What is the SI unit of electric current?,A. Volt,B. Ampere,C. Watt,D. Ohm,B
+What is the atomic number of oxygen?,A. 6,B. 7,C. 8,D. 9,C
+What is the largest organ in the human body?,A. Liver,B. Skin,C. Brain,D. Heart,B
+Who was the second man to walk on the moon?,A. Neil Armstrong,B. Buzz Aldrin,C. Michael Collins,D. Yuri Gagarin,B
+What is the hardest natural substance on Earth?,A. Gold,B. Iron,C. Diamond,D. Quartz,C
+What is the largest planet in the solar system?,A. Earth,B. Jupiter,C. Saturn,D. Uranus,B
+Which blood type is known as the universal donor?,A. AB+,B. O+,C. O-,D. A-,C
+What is the boiling point of water at standard atmospheric pressure?,A. 90°C,B. 100°C,C. 110°C,D. 120°C,B
+What is the term for animals that eat only plants?,A. Carnivores,B. Herbivores,C. Omnivores,D. Insectivores,B
+What is the process by which plants make their own food?,A. Respiration,B. Digestion,C. Photosynthesis,D. Transpiration,C
+What element does "Na" represent on the periodic table?,A. Nitrogen,B. Sodium,C. Nickel,D. Neon,B
+What is the smallest unit of life?,A. Molecule,B. Atom,C. Cell,D. Organ,C
+What is the most abundant gas in Earth's atmosphere?,A. Oxygen,B. Carbon dioxide,C. Nitrogen,D. Hydrogen,C
+What is the primary function of red blood cells?,A. Transport oxygen,B. Fight infections,C. Clot blood,D. Produce hormones,A
+Which gas is responsible for the greenhouse effect?,A. Oxygen,B. Carbon dioxide,C. Nitrogen,D. Hydrogen,B
+What is the smallest prime number?,A. 0,B. 1,C. 2,D. 3,C
+Which law states that energy cannot be created or destroyed?,A. Law of Conservation of Energy,B. Newton's First Law,C. Theory of Relativity,D. Law of Conservation of Mass,A
+What is the measure of each interior angle in a regular hexagon?,A. 120°,B. 135°,C. 140°,D. 150°,A
+What is the derivative of x³?,A. 2x,B. 3x²,C. x²,D. 3x,B
+What is the name of the phase change from gas to liquid?,A. Evaporation,B. Condensation,C. Sublimation,D. Freezing,B
+Who was the general of the Confederate Army during the American Civil War?,A. Ulysses S. Grant,B. Robert E. Lee,C. Stonewall Jackson,D. William T. Sherman,B
+Which country is the largest by land area?,A. Canada,B. China,C. Russia,D. United States,C
+Who developed the first successful polio vaccine?,A. Louis Pasteur,B. Jonas Salk,C. Alexander Fleming,D. Edward Jenner,B
+What is the square root of 169?,A. 11,B. 12,C. 13,D. 14,C
+What is the chemical formula for table salt?,A. NaCl,B. KCl,C. MgCl₂,D. Na₂CO₃,A
+Which scientist is credited with the discovery of penicillin?,A. Gregor Mendel,B. Alexander Fleming,C. Louis Pasteur,D. Marie Curie,B
+What is the powerhouse of the cell?,A. Nucleus,B. Ribosome,C. Mitochondria,D. Cytoplasm,C
+What does DNA stand for?,A. Deoxyribonucleic Acid,B. Dinucleic Acid,C. Deoxynucleic Acid,D. Dicarboxylic Acid,A
+Who proposed the theory of general relativity?,A. Isaac Newton,B. Albert Einstein,C. Galileo Galilei,D. Niels Bohr,B
+What is the capital of Australia?,A. Sydney,B. Melbourne,C. Canberra,D. Perth,C
+Which of the following is a scalar quantity?,A. Force,B. Velocity,C. Speed,D. Momentum,C
+What is the sum of the first 10 positive integers?,A. 45,B. 50,C. 55,D. 60,C
+Who is credited with inventing the World Wide Web?,A. Steve Jobs,B. Tim Berners-Lee,C. Bill Gates,D. Alan Turing,B
+What is the chemical symbol for gold?,A. Au,B. Ag,C. Fe,D. Pb,A
+What is the name of the largest ocean on Earth?,A. Atlantic,B. Indian,C. Pacific,D. Arctic,C
+What is the Pythagorean Theorem?,A. a² + b² = c²,B. a² - b² = c²,C. a² × b² = c²,D. a² ÷ b² = c²,A
+What is the atomic number of hydrogen?,A. 0,B. 1,C. 2,D. 3,B
+Who was the first woman to win a Nobel Prize?,A. Marie Curie,B. Jane Goodall,C. Rosalind Franklin,D. Ada Lovelace,A
+What is the freezing point of water in Fahrenheit?,A. 0°F,B. 32°F,C. 50°F,D. 100°F,B
+What is the largest internal organ in the human body?,A. Heart,B. Liver,C. Kidney,D. Lung,B
+Who was the author of "The Republic"?,A. Aristotle,B. Socrates,C. Plato,D. Homer,C
+What is the term for the splitting of an atomic nucleus?,A. Fusion,B. Fission,C. Ionization,D. Combustion,B
+What is the capital of Canada?,A. Toronto,B. Ottawa,C. Montreal,D. Vancouver,B
+Who painted the ceiling of the Sistine Chapel?,A. Leonardo da Vinci,B. Raphael,C. Michelangelo,D. Donatello,C
+What is the study of the universe called?,A. Biology,B. Astronomy,C. Geology,D. Meteorology,B
+What is the term for an angle greater than 90° but less than 180°?,A. Acute,B. Right,C. Obtuse,D. Reflex,C
+Which planet has the most moons?,A. Mars,B. Jupiter,C. Saturn,D. Uranus,B
+What is the process by which plants lose water through their leaves?,A. Photosynthesis,B. Transpiration,C. Respiration,D. Osmosis,B
+Who discovered gravity after observing a falling apple?,A. Albert Einstein,B. Galileo Galilei,C. Isaac Newton,D. Johannes Kepler,C
+What is the unit of measure for electric resistance?,A. Volt,B. Ampere,C. Ohm,D. Joule,C
+Who was the 16th president of the United States?,A. George Washington,B. Abraham Lincoln,C. Thomas Jefferson,D. Theodore Roosevelt,B
+What is the primary gas found in the Sun?,A. Oxygen,B. Nitrogen,C. Hydrogen,D. Helium,C
+What is the chemical formula for carbon dioxide?,A. CO,B. CO₂,C. C₂O,D. C₂O₂,B
+What is the value of pi (π) to two decimal places?,A. 3.12,B. 3.14,C. 3.16,D. 3.18,B
+What is the hardest bone in the human body?,A. Skull,B. Femur,C. Spine,D. Tibia,B
+Which layer of Earth's atmosphere contains the ozone layer?,A. Troposphere,B. Stratosphere,C. Mesosphere,D. Thermosphere,B
+Who was the first Filipino to circumnavigate the globe?,A. Lapu-Lapu,B. Ferdinand Magellan,C. Enrique of Malacca,D. Andres Bonifacio,C
+What is the smallest particle of an element?,A. Molecule,B. Atom,C. Proton,D. Electron,B
+What is the acceleration of a free-falling object on Earth?,A. 8.9 m/s²,B. 9.8 m/s²,C. 10.8 m/s²,D. 11.8 m/s²,B
+What is the speed of light in a vacuum?,A. 300,000 km/s,B. 150,000 km/s,C. 250,000 km/s,D. 350,000 km/s,A
+Who was the longest-reigning British monarch before Queen Elizabeth II?,A. Queen Victoria,B. King George III,C. Queen Anne,D. King Edward VII,A
+What is the term for an organism that can make its own food?,A. Autotroph,B. Heterotroph,C. Parasite,D. Decomposer,A
+Who wrote "Don Quixote"?,A. Miguel de Cervantes,B. William Shakespeare,C. Dante Alighieri,D. Johann Wolfgang von Goethe,A
+What is the SI unit of temperature?,A. Celsius,B. Fahrenheit,C. Kelvin,D. Joule,C
+What is the capital of Italy?,A. Florence,B. Milan,C. Venice,D. Rome,D
+Who was the leader of the Soviet Union during World War II?,A. Vladimir Lenin,B. Joseph Stalin,C. Nikita Khrushchev,D. Leonid Brezhnev,B
+What is the chemical symbol for lead?,A. Pb,B. Fe,C. Au,D. Ag,A
+What is the largest type of star in the universe?,A. White dwarf,B. Red giant,C. Neutron star,D. Supergiant,D
+What is the most abundant element in the universe?,A. Oxygen,B. Hydrogen,C. Carbon,D. Helium,B
+What is the term for the distance light travels in one year?,A. Astronomical unit,B. Light-year,C. Parsec,D. Kilometer,B
+Who proposed the heliocentric model of the solar system?,A. Galileo Galilei,B. Nicolaus Copernicus,C. Johannes Kepler,D. Ptolemy,B
+What is the longest river in the world?,A. Amazon,B. Nile,C. Yangtze,D. Mississippi,B
+What is the name of the treaty that ended World War II in Europe?,A. Treaty of Versailles,B. Treaty of Paris,C. Potsdam Agreement,D. Instrument of Surrender,D
+
+ 
