@@ -1,4 +1,4 @@
- package quizwars;
+   package quizwars;
 import java.util.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -15,9 +15,9 @@ public class QuizGame {
     public static final String CYAN = "\u001B[36m"; 
     
     // Time limits in seconds for each difficulty
-    private static final int EASY_TIME_LIMIT = 180;    // 3 minutes
-    private static final int MEDIUM_TIME_LIMIT = 300;  // 5 minutes
-    private static final int HARD_TIME_LIMIT = 600;    // 10 minutes
+    private static final int EASY_TIME_LIMIT = 60;    // 1 minutes
+    private static final int MEDIUM_TIME_LIMIT = 120;  // 2 minutes
+    private static final int HARD_TIME_LIMIT = 240;    // 4 minutes
     
     // System managers and game state variables
     private static StatsManager statsManager;
@@ -124,9 +124,9 @@ public class QuizGame {
         System.out.println("\n" + CYAN + "╔════════════════════════════════╗");
         System.out.println("║     Select Difficulty Level    ║");
         System.out.println("╠════════════════════════════════╣");
-        System.out.println("║  1. Easy   (3 minutes)         ║");
-        System.out.println("║  2. Medium (5 minutes)         ║");
-        System.out.println("║  3. Hard   (10 minutes)        ║");
+        System.out.println("║  1. Easy   (1 minute)          ║");
+        System.out.println("║  2. Medium (2 minutes)         ║");
+        System.out.println("║  3. Hard   (4 minutes)         ║");
         System.out.println("╚════════════════════════════════╝" + RESET);
 
         // Get difficulty selection from user
