@@ -2,6 +2,7 @@
 import java.util.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.concurrent.*;
 
 public class QuizGame {
     // ANSI color codes for terminal output
@@ -13,6 +14,11 @@ public class QuizGame {
     public static final String PURPLE = "\u001B[35m";
     public static final String CYAN = "\u001B[36m"; 
     
+    // Time limits in seconds for each difficulty
+    private static final int EASY_TIME_LIMIT = 180;    // 3 minutes
+    private static final int MEDIUM_TIME_LIMIT = 300;  // 5 minutes
+    private static final int HARD_TIME_LIMIT = 600;    // 10 minutes
+    
     // System managers and game state variables
     private static StatsManager statsManager;
     private static long startTime;
@@ -20,6 +26,11 @@ public class QuizGame {
     private static PowerUp powerUps;
     private static AdvancedStats advancedStats;
     private static int currentStreak = 0;
+    private static volatile boolean isTimerRunning = false;
+    private static ScheduledExecutorService timerExecutor;
+    private static ScheduledFuture<?> timerFuture;
+    private static volatile int timeRemaining;
+    private static volatile boolean timeExpired = false;
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
@@ -30,6 +41,7 @@ public class QuizGame {
         Achievement.initializeAchievements();
         PowerUp.initializePowerUps();
         advancedStats = new AdvancedStats();
+        timerExecutor = Executors.newSingleThreadScheduledExecutor();
 
         // Display welcome message
         displayAsciiWelcome();
@@ -64,11 +76,42 @@ public class QuizGame {
                     break;
                 case "5":
                     displayGoodbye();
+                    timerExecutor.shutdown();
                     return;
                 default:
                     System.out.println(RED + "Invalid choice! Please select 1-5." + RESET);
             }
         }
+    }
+
+    private static void startTimer(int timeLimit) {
+        isTimerRunning = true;
+        timeExpired = false;
+        timeRemaining = timeLimit;
+        
+        timerFuture = timerExecutor.scheduleAtFixedRate(() -> {
+            if (isTimerRunning && timeRemaining > 0) {
+                System.out.print("\r" + YELLOW + "Time Remaining: " + formatTime(timeRemaining) + RESET);
+                timeRemaining--;
+            } else if (timeRemaining <= 0 && !timeExpired) {
+                timeExpired = true;
+                System.out.println("\n" + RED + "Time's up! Game Over!" + RESET);
+                isTimerRunning = false;
+            }
+        }, 0, 1, TimeUnit.SECONDS);
+    }
+
+    private static void stopTimer() {
+        isTimerRunning = false;
+        if (timerFuture != null) {
+            timerFuture.cancel(false);
+        }
+    }
+
+    private static String formatTime(long seconds) {
+        long minutes = seconds / 60;
+        long remainingSeconds = seconds % 60;
+        return String.format("%02d:%02d", minutes, remainingSeconds);
     }
 
     private static void startGame(Scanner userInput) {
@@ -77,24 +120,34 @@ public class QuizGame {
         currentStreak = 0;
         startTime = System.currentTimeMillis();
 
-        // Display difficulty selection menu
+        // Display difficulty selection menu with time limits
         System.out.println("\n" + CYAN + "╔════════════════════════════════╗");
         System.out.println("║     Select Difficulty Level    ║");
         System.out.println("╠════════════════════════════════╣");
-        System.out.println("║  1. Easy                       ║");
-        System.out.println("║  2. Medium                     ║");
-        System.out.println("║  3. Hard                       ║");
+        System.out.println("║  1. Easy   (3 minutes)         ║");
+        System.out.println("║  2. Medium (5 minutes)         ║");
+        System.out.println("║  3. Hard   (10 minutes)        ║");
         System.out.println("╚════════════════════════════════╝" + RESET);
 
         // Get difficulty selection from user
         String difficulty;
+        int timeLimit;
         while (true) {
             System.out.print(CYAN + "Enter your choice (1-3): " + RESET);
             String choice = userInput.nextLine().trim();
             switch (choice) {
-                case "1": difficulty = "easy"; break;
-                case "2": difficulty = "medium"; break;
-                case "3": difficulty = "hard"; break;
+                case "1": 
+                    difficulty = "easy"; 
+                    timeLimit = EASY_TIME_LIMIT;
+                    break;
+                case "2": 
+                    difficulty = "medium"; 
+                    timeLimit = MEDIUM_TIME_LIMIT;
+                    break;
+                case "3": 
+                    difficulty = "hard"; 
+                    timeLimit = HARD_TIME_LIMIT;
+                    break;
                 default:
                     System.out.println(RED + "Invalid choice! Please select 1, 2, or 3." + RESET);
                     continue;
@@ -114,14 +167,18 @@ public class QuizGame {
         totalQuestions = questionQueue.size();
 
         displayGameStart();
+        
+        // Start the overall game timer
+        startTimer(timeLimit);
 
         // Main question loop
-        for (int i = 0; i < totalQuestions; i++) {
+        for (int i = 0; i < totalQuestions && !timeExpired; i++) {
             // Get next question from queue
             Question currentQuestion = questionQueue.poll();
             
             // Show progress
             displayProgressBar(i + 1, totalQuestions);
+            System.out.println(); // New line after progress bar
 
             // Power-up selection
             PowerUp.displayPowerUps();
@@ -131,7 +188,10 @@ public class QuizGame {
             switch (powerUpChoice) {
                 case "F": PowerUp.usePowerUp(PowerUp.FIFTY_FIFTY, currentQuestion); break;
                 case "H": PowerUp.usePowerUp(PowerUp.HINT, currentQuestion); break;
-                case "T": PowerUp.usePowerUp(PowerUp.EXTRA_TIME, currentQuestion); break;
+                case "T": 
+                    PowerUp.usePowerUp(PowerUp.EXTRA_TIME, currentQuestion);
+                    timeRemaining += 30; // Add 30 seconds when using time power-up
+                    break;
             }
 
             // Display question
@@ -148,34 +208,40 @@ public class QuizGame {
 
             // Get and validate user answer
             String answer;
-            while (true) {
-                System.out.print(BLUE + "Your Answer (A/B/C/D): " + RESET);
+            while (!timeExpired) {
+                System.out.print("\n" + BLUE + "Your Answer (A/B/C/D): " + RESET);
                 answer = userInput.nextLine().trim().toUpperCase();
                 
                 if (answer.equals("A") || answer.equals("B") || answer.equals("C") || answer.equals("D")) {
-                    break;                     
+                    // Check answer and update stats
+                    boolean correct = answer.equals(currentQuestion.getCorrectAnswer());
+                    if (correct) {
+                        System.out.println(GREEN + "✓ CORRECT! Well done!" + RESET);
+                        score++;
+                        currentStreak++;
+                    } else {
+                        System.out.println(RED + "✗ Incorrect. The correct answer was: " + currentQuestion.getCorrectAnswer() + RESET);
+                        currentStreak = 0;
+                    }
+                    break;
                 } else {
                     System.out.println(RED + "Invalid input! Please enter A, B, C, or D." + RESET);
                 }
             }
 
-            // Check answer and update stats
-            boolean correct = answer.equals(currentQuestion.getCorrectAnswer());
-            if (correct) {
-                System.out.println(GREEN + "✓ CORRECT! Well done!" + RESET);
-                score++;
-                currentStreak++;
-            } else {
-                System.out.println(RED + "✗ Incorrect. The correct answer was: " + currentQuestion.getCorrectAnswer() + RESET);
-                currentStreak = 0;
+            if (timeExpired) {
+                break;
             }
 
             displayScore(score, i + 1);
             sleep(1000);
         }
 
+        // Stop the timer
+        stopTimer();
+
         // Game completion calculations
-        long timeTaken = (System.currentTimeMillis() - startTime) / 1000;
+        long timeTaken = timeLimit - timeRemaining;
         double percentage = (score * 100.0) / totalQuestions;
 
         // Display final results
@@ -184,7 +250,7 @@ public class QuizGame {
         System.out.println("╠══════════════════════════════════════════╣");
         System.out.printf("║ Score: %d/%d                              ║\n", score, totalQuestions);
         System.out.printf("║ Percentage: %.1f%%                        ║\n", percentage);
-        System.out.printf("║ Time Taken: %d seconds                    ║\n", timeTaken);
+        System.out.printf("║ Time Taken: %s                           ║\n", formatTime(timeTaken));
         System.out.println("╚══════════════════════════════════════════╝" + RESET);
 
         // Save game statistics
@@ -213,6 +279,7 @@ public class QuizGame {
                 break;
             } else if (userResponse.equals("n")) {
                 displayGoodbye();
+                timerExecutor.shutdown();
                 System.exit(0);
             } else {
                 System.out.println(RED + "ERROR: Invalid Input. Y for yes N for no. " + RESET);
@@ -252,8 +319,6 @@ public class QuizGame {
         System.out.println("2...");
         sleep(500);
         System.out.println("1...");
-        sleep(500);
-        System.out.println("GO!" + RESET + "\n");
         sleep(500);
     }
 
