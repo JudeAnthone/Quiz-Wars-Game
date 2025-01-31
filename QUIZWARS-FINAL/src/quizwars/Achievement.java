@@ -1,4 +1,4 @@
- package quizwars;
+  package quizwars;
 
 import java.io.*;
 import java.util.*;
@@ -65,24 +65,28 @@ public class Achievement {
     }
     
     private static void displayAchievementUnlock(Achievement achievement) {
-        System.out.println("\n" + QuizGame.YELLOW + "╔══════════════ ACHIEVEMENT UNLOCKED ══════════════╗");
-        System.out.printf("║ %-48s ║%n", achievement.name);
-        System.out.printf("║ %-48s ║%n", achievement.description);
-        System.out.printf("║ Points: %-42d ║%n", achievement.pointValue);
-        System.out.println("╚══════════════════════════════════════════════════╝" + QuizGame.RESET);
+        System.out.println("\n" + QuizGame.YELLOW + 
+                           "╔════════════════════════════════════════════════════════════════════╗");
+         System.out.printf("║ %-69s ║%n", "ACHIEVEMENT UNLOCKED");
+         System.out.printf("║ %-69s ║%n", achievement.name);
+         System.out.printf("║ %-69s ║%n", achievement.description);
+         System.out.printf("║ %-69s ║%n", "Points: " + achievement.pointValue);
+        System.out.println("╚════════════════════════════════════════════════════════════════════╝" + QuizGame.RESET);
     }
-    
+
     public static void displayAllAchievements() {
-        System.out.println(QuizGame.PURPLE + "\n╔═════════════════ ACHIEVEMENTS ════════════════╗");
+        System.out.println(QuizGame.PURPLE + "\n╔════════════════════════════════════════════════════════════════════╗");
         for (Achievement achievement : achievements.values()) {
-            String status = achievement.unlocked ? QuizGame.GREEN + "✓" : QuizGame.RED + "✗";
-            System.out.printf("║ %s %-46s ║%n", status, achievement.name + QuizGame.PURPLE);
-            System.out.printf("║   %-46s ║%n", achievement.description);
-            System.out.printf("║   Points: %-40d ║%n", achievement.pointValue);
-            System.out.println("╟──────────────────────────────────────────────╢");
+             String status = achievement.unlocked ? QuizGame.GREEN + "✓" : QuizGame.RED + "✗";
+             System.out.printf("║ %-5s %-64s ║%n", status, achievement.name + QuizGame.PURPLE);
+             System.out.printf("║ %-69s ║%n", achievement.description);
+             System.out.printf("║ %-69s ║%n", "Points: " + achievement.pointValue);
+            System.out.println("╟────────────────────────────────────────────────────────────────────╢");
         }
-        System.out.println("╚══════════════════════════════════════════════╝" + QuizGame.RESET);
+            System.out.println("╚════════════════════════════════════════════════════════════════════╝" + QuizGame.RESET);
     }
+
+
     
     private static void saveAchievements() {
         try (PrintWriter writer = new PrintWriter(new FileWriter(ACHIEVEMENTS_FILE))) {
