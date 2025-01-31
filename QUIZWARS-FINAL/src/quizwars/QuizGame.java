@@ -48,15 +48,18 @@ public class QuizGame {
 
         while (playAgain) {
             // Display main menu
-            System.out.println("\n" + CYAN + "╔════════════════════════════════╗");
-            System.out.println("║         QUIZWARS MENU          ║");
-            System.out.println("╠════════════════════════════════╣");
-            System.out.println("║  1. Start New Game             ║");
-            System.out.println("║  2. View Game History          ║");
-            System.out.println("║  3. View Achievements          ║");
-            System.out.println("║  4. View Advanced Stats        ║");
-            System.out.println("║  5. Exit                       ║");
-            System.out.println("╚════════════════════════════════╝" + RESET);
+        	System.out.println("\n" + CYAN + 
+                    "╔═════════════════════════════════════════════════════════════════╗\n" +
+                    "║                         QUIZWARS MENU                           ║\n" +
+                    "╠═════════════════════════════════════════════════════════════════╣\n" +
+                    "║                                                                 ║\n" +
+                    "║                     1. Start New Game                           ║\n" +
+                    "║                     2. View Game History                        ║\n" +
+                    "║                     3. View Achievements                        ║\n" +
+                    "║                     4. View Advanced Stats                      ║\n" +
+                    "║                     5. Exit                                     ║\n" +
+                    "║                                                                 ║\n" +
+                    "╚═════════════════════════════════════════════════════════════════╝" + RESET);
 
             System.out.print(CYAN + "Enter your choice (1-5): " + RESET);
             String menuChoice = userInput.nextLine().trim();
@@ -121,13 +124,16 @@ public class QuizGame {
         startTime = System.currentTimeMillis();
 
         // Display difficulty selection menu with time limits
-        System.out.println("\n" + CYAN + "╔════════════════════════════════╗");
-        System.out.println("║     Select Difficulty Level    ║");
-        System.out.println("╠════════════════════════════════╣");
-        System.out.println("║  1. Easy   (1 minute)          ║");
-        System.out.println("║  2. Medium (2 minutes)         ║");
-        System.out.println("║  3. Hard   (4 minutes)         ║");
-        System.out.println("╚════════════════════════════════╝" + RESET);
+        System.out.println("\n" + CYAN + 
+                "╔═════════════════════════════════════════════════════════════════╗\n" +
+                "║                    Select Difficulty Level                      ║\n" +
+                "╠═════════════════════════════════════════════════════════════════╣\n" +
+                "║                                                                 ║\n" +
+                "║                   1. Easy   (1 minute)                          ║\n" +
+                "║                   2. Medium (2 minutes)                         ║\n" +
+                "║                   3. Hard   (4 minutes)                         ║\n" +
+                "║                                                                 ║\n" +
+                "╚═════════════════════════════════════════════════════════════════╝" + RESET);
 
         // Get difficulty selection from user
         String difficulty;
@@ -194,17 +200,26 @@ public class QuizGame {
                     break;
             }
 
-            // Display question
-            System.out.println("\n" + PURPLE + "╔══════════════════════════════════════════╗");
-            System.out.printf("║ Question %d of %d                         ║\n", (i + 1), totalQuestions);
-            System.out.println("╚══════════════════════════════════════════╝" + RESET);
-            
-            System.out.println(CYAN + "┌────────────────────────────────────────────────────────┐");
-            System.out.printf("│ %-54s │\n", currentQuestion.getQuestionText());
-            System.out.println("├────────────────────────────────────────────────────────┤");
-            System.out.printf("│ %-25s %-25s    │\n", "A: " + currentQuestion.getOptionA(), "B: " + currentQuestion.getOptionB());
-            System.out.printf("│ %-25s %-25s    │\n", "C: " + currentQuestion.getOptionC(), "D: " + currentQuestion.getOptionD());
-            System.out.println("└────────────────────────────────────────────────────────┘" + RESET);
+         // Display question header
+            System.out.println("\n" + PURPLE + "╔═════════════════════════════════════════════════════════════════════════════╗");
+            System.out.printf("║ Question %d of %d %-54s║\n", (i + 1), totalQuestions, ""); 
+            System.out.println("╚═════════════════════════════════════════════════════════════════════════════╝" + RESET);
+
+            // Display the question box
+            System.out.println(CYAN + "╔═════════════════════════════════════════════════════════════════════════════╗");
+            System.out.printf("║ %-75s ║\n", ""); 
+            System.out.printf("║ %-75s ║\n", currentQuestion.getQuestionText());
+            System.out.printf("║ %-75s ║\n", ""); 
+            System.out.println("╠═════════════════════════════════════════════════════════════════════════════╣");
+
+            // Display answer choices in two columns (properly aligned)
+            System.out.printf("║ %-36s %-36s   ║\n", "A: " + currentQuestion.getOptionA(), "B: " + currentQuestion.getOptionB());
+            System.out.printf("║ %-36s %-36s   ║\n", "C: " + currentQuestion.getOptionC(), "D: " + currentQuestion.getOptionD());
+
+            // Close the box
+            System.out.println("╚═════════════════════════════════════════════════════════════════════════════╝" + RESET);
+
+
 
             // Get and validate user answer
             String answer;
@@ -244,14 +259,16 @@ public class QuizGame {
         long timeTaken = timeLimit - timeRemaining;
         double percentage = (score * 100.0) / totalQuestions;
 
-        // Display final results
-        System.out.println("\n" + PURPLE + "╔══════════════════════════════════════════╗");
-        System.out.println("║             FINAL RESULTS                ║");
-        System.out.println("╠══════════════════════════════════════════╣");
-        System.out.printf("║ Score: %d/%d                              ║\n", score, totalQuestions);
-        System.out.printf("║ Percentage: %.1f%%                        ║\n", percentage);
-        System.out.printf("║ Time Taken: %s                           ║\n", formatTime(timeTaken));
-        System.out.println("╚══════════════════════════════════════════╝" + RESET);
+     // Display final results
+        System.out.println("\n" + PURPLE + "╔═════════════════════════════════════════════════════════════════════════════╗");
+        System.out.println("║                                FINAL RESULTS                                    ║");
+        System.out.println("╠═════════════════════════════════════════════════════════════════════════════╣");
+        System.out.println("║                                                                             ║");
+         System.out.printf("║                          Score: %d/%d                                       ║\n", score, totalQuestions);
+         System.out.printf("║                          Percentage: %.1f%%                                 ║\n", percentage);
+         System.out.printf("║                          Time Taken: %s                                     ║\n", formatTime(timeTaken));
+        System.out.println("║                                                                             ║");
+        System.out.println("╚═════════════════════════════════════════════════════════════════════════════╝" + RESET);
 
         // Save game statistics
         GameStats stats = new GameStats(statsManager.getCurrentTrialNumber() + 1, 
