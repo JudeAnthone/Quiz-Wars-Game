@@ -1,4 +1,4 @@
-  // base class of the questions 
+   // base class of the questions 
 // the whole class is abstract class overrided on Easy, Medium, Hard Question file
 package quizwars;
 
