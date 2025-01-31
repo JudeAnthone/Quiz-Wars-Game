@@ -1,4 +1,4 @@
-package quizwars;
+ package quizwars;
 import java.util.HashMap;
 import java.util.*;
 
@@ -31,14 +31,17 @@ public class AdvancedStats {
     }
     
     public void displayAdvancedStats() {
-        System.out.println(QuizGame.PURPLE + "\n╔═════════════ ADVANCED STATISTICS ════════════╗");
-        System.out.printf("║ Games Played: %-31d ║%n", gamesPlayed);
-        System.out.printf("║ Overall Accuracy: %-28.1f%% ║%n", 
-            (totalCorrect * 100.0) / totalQuestions);
-        System.out.printf("║ Perfect Scores: %-29d ║%n", perfectScores);
-        System.out.printf("║ Longest Streak: %-29d ║%n", longestStreak);
-        System.out.printf("║ Avg Time per Question: %-23.1fs ║%n", 
-            averageTimePerQuestion);
-        System.out.println("╚══════════════════════════════════════════════╝" + QuizGame.RESET);
+        System.out.println(QuizGame.PURPLE + "\n╔═════════════════════════════════════════════════════════════════╗");
+         System.out.printf("║ %-64s║%n", "ADVANCED STATISTICS");
+         System.out.printf("║ %-64s║%n", "---------------------------------------------------------------");
+         System.out.printf("║ Games Played: %-49d ║%n", gamesPlayed);
+         System.out.printf("║ Overall Accuracy: %-43.1f%%  ║%n", (totalCorrect * 100.0) / totalQuestions);
+         System.out.printf("║ Perfect Scores: %-47d ║%n", perfectScores);
+         System.out.printf("║ Longest Streak: %-47d ║%n", longestStreak);
+         System.out.printf("║ Avg Time per Question: %-42.1fs║%n", averageTimePerQuestion);
+        System.out.println("╚═════════════════════════════════════════════════════════════════╝" + QuizGame.RESET);
     }
+
+
+
 }
