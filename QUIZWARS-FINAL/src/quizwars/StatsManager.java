@@ -1,4 +1,4 @@
-package quizwars;
+ package quizwars;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -89,12 +89,14 @@ public class StatsManager {
             return;
         }
 
-        System.out.println(QuizGame.PURPLE + "\n╔════════════════════ GAME HISTORY ════════════════════╗");
-        System.out.println("║ Trial  Difficulty  Score  Time(s)  Date            ║");
-        System.out.println("╠═══════════════════════════════════════════════════╣" + QuizGame.RESET);
+        System.out.println(QuizGame.PURPLE + "\n╔═══════════════════════════════════════════════════════════╗");
+        System.out.println("║                     GAME HISTORY                          ║");
+        System.out.println("╠═════════╦════════════╦══════════╦══════════╦══════════════╣" + QuizGame.RESET);
+        System.out.println("║ Trial # ║ Difficulty ║  Score   ║ Time (s) ║     Date     ║");
+        System.out.println("╠═════════╬════════════╬══════════╬══════════╬══════════════╣");
 
         for (GameStats stats : allStats) {
-            System.out.printf(QuizGame.CYAN + "║ #%-6d %-11s %3d/%-3d %-8d %-15s ║%n",
+            System.out.printf(QuizGame.CYAN + "║ %-7d ║ %-10s ║ %3d/%-3d  ║ %-8d ║ %-12s ║%n",
                 stats.getTrialNumber(),
                 stats.getDifficulty(),
                 stats.getScore(),
@@ -103,12 +105,13 @@ public class StatsManager {
                 stats.getDate().split(" ")[0]
             );
         }
-        
-        System.out.println(QuizGame.PURPLE + "╚═══════════════════════════════════════════════════════╝" + QuizGame.RESET);
-        
+
+        System.out.println(QuizGame.PURPLE + "╚═════════╩════════════╩══════════╩══════════╩══════════════╝" + QuizGame.RESET);
+
         // Display statistics summary
         displayStatsSummary();
     }
+
 
     private void displayStatsSummary() {
         Map<String, List<GameStats>> difficultyStats = new HashMap<>();
