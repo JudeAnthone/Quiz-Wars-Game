@@ -1,4 +1,4 @@
-  // utility class
+   // utility class
 package quizwars;
 import java.io.*;
 import java.util.*;
